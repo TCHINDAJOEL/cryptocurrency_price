@@ -1,0 +1,54 @@
+Bien sûr, voici une note expliquant méthodiquement chaque partie du code :
+
+---
+
+**Note explicative sur l'application de prix de Binance :**
+
+1. **Importation des bibliothèques nécessaires :**
+   - Les bibliothèques `streamlit` et `pandas` sont importées pour créer l'interface utilisateur et manipuler les données, respectivement.
+
+2. **Titre de l'application :**
+   - Un titre est affiché pour décrire brièvement le but de l'application.
+
+3. **En-tête pour les prix sélectionnés :**
+   - Un en-tête est affiché pour marquer la section où les prix des cryptomonnaies sélectionnées seront affichés.
+
+4. **Chargement des données du marché depuis l'API de Binance :**
+   - Les données du marché sont chargées à partir de l'API de Binance à l'aide de la fonction `pd.read_json()` de pandas. Cela récupère les prix des cryptomonnaies pour les 24 dernières heures.
+
+5. **Fonction personnalisée pour arrondir les valeurs :**
+   - Une fonction `arrondir_valeur()` est définie pour arrondir les valeurs des prix des cryptomonnaies en fonction de leur échelle.
+
+6. **Création de colonnes pour afficher les prix :**
+   - Trois colonnes sont créées à l'aide de `st.columns()` pour afficher les prix des cryptomonnaies sélectionnées.
+
+7. **Sélection des cryptomonnaies dans la barre latérale :**
+   - Des widgets de sélection sont ajoutés dans la barre latérale pour permettre à l'utilisateur de choisir jusqu'à trois cryptomonnaies parmi celles disponibles.
+
+8. **Extraction des données des cryptomonnaies sélectionnées :**
+   - Les données des cryptomonnaies sélectionnées sont extraites du DataFrame en fonction de leur symbole.
+
+9. **Application de la fonction d'arrondi aux prix des cryptomonnaies :**
+   - La fonction `arrondir_valeur()` est appliquée aux prix des cryptomonnaies sélectionnées pour arrondir les valeurs en fonction de leur échelle.
+
+10. **Calcul de la variation des prix des cryptomonnaies :**
+    - La colonne `priceChangePercent` est extraite pour afficher la variation des prix des cryptomonnaies.
+
+11. **Création de boîtes pour afficher les prix :**
+    - Des boîtes de prix sont créées à l'aide de `st.metric()` pour afficher les prix des cryptomonnaies sélectionnées avec leur variation.
+
+12. **En-tête pour afficher tous les prix :**
+    - Un en-tête est affiché pour marquer la section où l'ensemble des données des prix sera affiché.
+
+13. **Affichage de l'ensemble des données des prix :**
+    - Toutes les données des prix sont affichées sous forme de DataFrame à l'aide de `st.dataframe()`.
+
+14. **Crédit de l'application :**
+    - Un crédit est donné à l'auteur de l'application.
+
+15. **Intégration des scripts Bootstrap pour le style :**
+    - Des scripts Bootstrap sont intégrés pour améliorer le style visuel de l'application.
+
+---
+
+Cette note explique de manière détaillée chaque partie du code de l'application, depuis le chargement des données jusqu'à l'affichage des prix sélectionnés et de l'ensemble des données. Si vous avez des questions supplémentaires ou si vous avez besoin de plus d'informations sur une partie spécifique, n'hésitez pas à demander !
